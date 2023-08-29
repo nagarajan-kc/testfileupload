@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DownloadFile</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th> Name</th>
+            <th> filetype</th>
+            <th> DownloadFile</th>
+        </thead>
+        <tbody>
+            <tr th:each="file: ${filedownload}">
+            <td th:text="${file.name}"></td>
+            <td th:text="${file.filetype}"></td>
+            <td><a th:href="${file.id}">Download</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
