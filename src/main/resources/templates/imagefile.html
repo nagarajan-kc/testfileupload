@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Image List</title>
+</head>
+<body>
+    <h1>Image List</h1>
+    <ul>
+        <li th:each="image : ${images}">
+            <img th:src="@{/image/{id}(id=${image.id})}" alt="Image" width="200" height="200" />
+        </li>
+    </ul>
+</body>
+</html>

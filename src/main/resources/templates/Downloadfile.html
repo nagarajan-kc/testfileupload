@@ -11,11 +11,17 @@
             <th> Name</th>
             <th> filetype</th>
             <th> DownloadFile</th>
+            <th> DeleteFile</th>
         </thead>
         <tbody>
             <tr th:each="file: ${filedownload}">
-            <td th:text="${file.name}"></td>
-            <td th:text="${file.filetype}"></td>
+            <td th:text="${file.name}"><br>
+                <br>
+            </td>
+            <td th:text="${file.filetype}">
+                <br>
+            <br>
+            </td>
             <td><a th:href="${file.id}">Download</a></td>
             </tr>
         </tbody>

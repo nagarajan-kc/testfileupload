@@ -28,5 +28,12 @@ public class FileServiceImpl implements FileService{
     public fileupload getFiles(Long id) {
       return fileRepository.findById(id).get();
     }
+
+    @Override
+    public void deleteById(Long id) {
+        fileRepository.deleteById(id);
+    }
+
+    
     
 }

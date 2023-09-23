@@ -20,12 +20,32 @@ import lombok.NoArgsConstructor;
 public class fileupload {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column
     @Lob
     private byte[] content;
+
+    @Column
+    @Lob
+    private byte[] image;
+
+    public byte[] getContent() {
+        return this.content;
+    }
+
+    public void setContent(byte[] content) {
+        this.content = content;
+    }
+
+    public byte[] getImage() {
+        return this.image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 
     @Column
     private String name;
@@ -63,6 +83,10 @@ public class fileupload {
 
     public void setFiletype(String filetype) {
         this.filetype = filetype;
+    }
+
+    public byte[] getData() {
+        return null;
     }
 
 
